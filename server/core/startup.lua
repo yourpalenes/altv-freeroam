@@ -1,12 +1,11 @@
 require("config.main")
 
 alt.on("playerConnect",
-    function()
+    function(player)
         local playerModel = globalSettings.startup.model[math.random(#globalSettings.startup.model)]
-        local spawnPosition = {globalSettings.startup.spawn.x, globalSettings.startup.spawn.y, globalSettings.startup.spawn.z}
+        local spawnPosition = globalSettings.startup.spawn
 
         player.model = playerModel
-        print("connected..")
-        player:spawn(unpack(spawnPosition), 0)
+        player:spawn(spawnPosition.x, spawnPosition.y, spawnPosition.z, 0)
     end
 )
