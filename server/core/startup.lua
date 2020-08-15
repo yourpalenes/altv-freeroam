@@ -1,5 +1,4 @@
-require("config.main")
-require("services.data")
+require "config.main"
 
 alt.on("playerConnect",
     function(player)

@@ -1,2 +1,2 @@
-require("vehicle.main")
-require("core.startup")
+require "vehicle.main"
+require "core.startup"
